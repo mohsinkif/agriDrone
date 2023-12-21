@@ -32,7 +32,7 @@ export default MyMap;
 function HeatMap() {
   const map = useMap();
   addressPoints = addressPoints.map(function (p) {
-    return [p[0], p[1], [Math.random()]];
+    return [p[0], p[1], p[2]];
   });
   var heat = L.heatLayer(addressPoints, { radius: 25 }).addTo(map);
 }
